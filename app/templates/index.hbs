@@ -1,0 +1,19 @@
+<table border="1">
+  <thead>
+    <td>Name</td>
+    <td>Username</td>
+    <td>E-mail</td>
+    <td>Address</td>
+  </thead>
+  {{#each model as |users|}}
+    <tr>
+      <td>{{#link-to 'user' users}}{{users.name}}{{/link-to}}</td>
+      <td>{{users.username}}</td>
+      <td>{{users.email}}</td>
+      <td>
+        {{users.address.street}} <br>
+        {{users.address.city}} {{users.address.state}} {{users.address.zipcode}}
+      </td>
+    </tr>
+  {{/each}}
+</table>

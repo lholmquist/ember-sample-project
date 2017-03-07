@@ -1,0 +1,17 @@
+<table border="1">
+  <thead>
+    <td>Name</td>
+    <td>Username</td>
+    <td>E-mail</td>
+    <td>Address</td>
+  </thead>
+    <tr>
+      <td>{{model.name}}</td>
+      <td>{{model.username}}</td>
+      <td>{{model.email}}</td>
+      <td>
+        {{model.address.street}} <br>
+        {{model.address.city}} {{model.address.state}} {{model.address.zipcode}}
+      </td>
+    </tr>
+</table>
