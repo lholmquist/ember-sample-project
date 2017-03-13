@@ -1,3 +1,5 @@
+{{#link-to 'index'}}Back{{/link-to}}
+
 <table border="1" id="users-table">
   <thead>
     <td>Name</td>
@@ -5,13 +7,5 @@
     <td>E-mail</td>
     <td>Address</td>
   </thead>
-    <tr>
-      <td>{{model.name}}</td>
-      <td>{{model.username}}</td>
-      <td>{{model.email}}</td>
-      <td>
-        {{model.address.street}} <br>
-        {{model.address.city}} {{model.address.state}} {{model.address.zipcode}}
-      </td>
-    </tr>
+  {{user-row users=model shouldLink=false}}
 </table>

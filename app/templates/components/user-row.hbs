@@ -1,0 +1,11 @@
+{{#if shouldLink}}
+  <td>{{#link-to 'user' users}}{{users.name}}{{/link-to}}</td>
+{{else}}
+  <td>{{users.name}}</td>
+{{/if}}
+<td>{{users.username}}</td>
+<td>{{users.email}}</td>
+<td>
+  {{users.address.street}} <br>
+  {{users.address.city}} {{users.address.state}} {{users.address.zipcode}}
+</td>
